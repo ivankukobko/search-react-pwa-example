@@ -32,7 +32,7 @@ export default class extends Component {
     return(
       <header>
         <form onSubmit={this.onFormSubmit} className="search-form-form">
-          <input autofocus className="search-form-input" size="10" maxlength="1024" onChange={this.onInputChange}/>
+          <input autofocus className="search-form-input" size="6" maxlength="1024" onChange={this.onInputChange}/>
           <button className="search-form-button" disabled={fetching}>Search</button>
         </form>
       </header>
