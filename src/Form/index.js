@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './SearchForm.css';
+import './index.css';
 
-class SearchForm extends Component {
+export default class extends Component {
   constructor(props) {
     super(props);
 
@@ -31,10 +31,8 @@ class SearchForm extends Component {
     return(
       <form onSubmit={this.onFormSubmit} className="search-form-form">
         <input className="search-form-input" onChange={this.onInputChange}/>
-        <button className="search-form-button">Search {this.props.fetching ? '...' : ''}</button>
+        <button className="search-form-button">Search{this.props.fetching ? 'ing...' : ''}</button>
       </form>
     )
   }
 }
-
-export default SearchForm;

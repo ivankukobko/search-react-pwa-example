@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Header from './Header/Header';
-import Search from './Search/Search';
+import Header from './Header';
+import Search from './Search';
 
 class App extends Component {
   render() {

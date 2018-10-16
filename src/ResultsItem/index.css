@@ -1,0 +1,29 @@
+.search-results-item {
+  border-bottom: 1px solid #eee;
+  display: block;
+  list-style: none;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.search-results-item:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.search-results-item-image {
+  float: left;
+  height: 64px;
+  margin-right: 12px;
+  width: 64px;
+}
+
+.search-results-item-title {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.search-results-item-title {
+  display: inline-block;
+}

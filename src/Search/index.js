@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 
-import SearchForm from '../SearchForm/SearchForm';
-import SearchResults from '../SearchResults/SearchResults';
+import Form from '../Form';
+import Results from '../Results';
+import settings from '../settings';
 
-class Search extends Component {
+export default class extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -17,11 +18,8 @@ class Search extends Component {
   onSearch (search) {
     this.setState({fetching: true})
 
-    fetch(`https://api.github.com/search/users?q=${search}`, {
-      headers: {
-        "User-Agent": "Awesome-Octocat-App",
-        "Accept": "application/vnd.github.v3+json"
-      }
+    fetch(`${settings.api_url}${search}`, {
+      headers: settings.default_headers
     })
       .then((response) => response.json())
       .then((result) => {
@@ -34,12 +32,10 @@ class Search extends Component {
   render () {
     return(
       <section className="App-body">
-        <SearchForm onSearch={this.onSearch} fetching={this.state.fetching} onResults />
-        <SearchResults items={this.state.items}/>
+        <Form onSearch={this.onSearch} fetching={this.state.fetching} onResults />
+        <Results items={this.state.items}/>
       </section>
     )
   }
 }
-
-export default Search;
 
