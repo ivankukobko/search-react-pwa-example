@@ -5,11 +5,17 @@
 
 .search-form-input {
   flex: 1;
-  border: 2px solid #eeeeee;
+  border: 0px;
+  border-bottom: 2px solid #eeeeee;
   font-size: 2em;
 }
 
 .search-form-button {
   border: 2px solid #eeeeee;
   font-size: 2em;
+  margin-left: 10px;
+}
+
+.search-form-button:disabled {
+  opacity: 0.5;
 }

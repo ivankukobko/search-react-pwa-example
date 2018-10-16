@@ -28,11 +28,14 @@ export default class extends Component {
   }
 
   render () {
+    const {fetching} = this.props
     return(
-      <form onSubmit={this.onFormSubmit} className="search-form-form">
-        <input className="search-form-input" onChange={this.onInputChange}/>
-        <button className="search-form-button">Search{this.props.fetching ? 'ing...' : ''}</button>
-      </form>
+      <header>
+        <form onSubmit={this.onFormSubmit} className="search-form-form">
+          <input autofocus className="search-form-input" size="10" maxlength="1024" onChange={this.onInputChange}/>
+          <button className="search-form-button" disabled={fetching}>Search</button>
+        </form>
+      </header>
     )
   }
 }

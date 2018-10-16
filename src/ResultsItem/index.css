@@ -20,10 +20,10 @@
 }
 
 .search-results-item-title {
+  color: #222222;
   font-size: 1.5em;
   text-decoration: none;
 }
 
-.search-results-item-title {
-  display: inline-block;
+.search-results-item-description {
 }
